@@ -1,0 +1,30 @@
+<div>
+    <div>
+        <h2>Welcome @Context.Session.GetString("UserName")</h2>
+    <a asp-action="Logout">
+    <button class="btn mt-3 border">Logout</button>
+    </a>
+        <hr/>
+    </div>
+
+    <div>
+        <h1>@Context.Session.GetInt32("CurrentNum")</h1>
+    </div>
+    <div>
+        <form asp-action="PlusOne">
+            <input type="submit" value="+1">
+        </form>
+        <form asp-action="MinusOne">
+            <input type="submit" value="-1">
+        </form>
+        
+    </div>
+    <div>
+        <form asp-action="TimesTwo">
+            <input type="submit" value="x2">
+        </form>        
+        <form asp-action="RandomAdd">
+            <input type="submit" value="+ Random">
+        </form>      
+    </div>
+</div>
