@@ -9,7 +9,7 @@
 }
 else{
 
-    <h1 class="display-4">Welcome <span class="text-primary">@Context.Session.GetString("UserName")</span>!</h1>
+    <h1 class="display-4">Logged in as: <span class="text-primary">@Context.Session.GetString("UserName")</span></h1>
 }
     <form asp-action="Login">
         <h3>Please enter your name:</h3>
