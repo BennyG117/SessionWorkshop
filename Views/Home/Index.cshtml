@@ -2,20 +2,22 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
 @if(Context.Session.GetString("UserName")== null)
 {
-    <h1>Please Enter a User Name Below!</h1>
+    <h1></h1>
 }
 else{
 
-    <h1 class="display-4">Welcome! <span class="text-warning">@Context.Session.GetString("UserName")</span></h1>
+    <h1 class="display-4">Welcome <span class="text-primary">@Context.Session.GetString("UserName")</span>!</h1>
 }
     <form asp-action="Login">
         <h3>Please enter your name:</h3>
         <label for="UserName"></label>
-        <input type="text" name="UserName" placeholder="Enter name here...">
-        <input class="btn btn-success border" type="submit" value="Login">
+        <div class="d-flex flex-column justify-content-center">
+            <input class="mb-3" type="text" name="UserName" placeholder="...">
+            <input class="btn border text-light" type="submit" value="Submit">
+        </div>
     </form>
 
 </div>

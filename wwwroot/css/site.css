@@ -16,3 +16,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.buttonSquares {
+  width: 125px;
+  height: 75px;
+
+}
